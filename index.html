@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>大厅</title>
-
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 <div id="product">
     <p v-html="productName"></p>
+    <li v-for="item in productListData"  v-on:click="handleClicked(item)">
+        <img src={{item.url}}  alt={{item.title}}/>
+    </li>
 </div>
 <script src="vue.min.js"></script>
 <script src="index.js"></script>
