@@ -6,11 +6,15 @@ new Vue({
     methods:{
         handleClicked:function (item) {
             alert("您选择了" + item.title + "商品");
+            this.addCount();
+        },
+        addCount:function () {
+            this.productName = this.productName + 1;
         }
     }
     ,
     data: {
-        productName: "Iphone SE",
+        productName: 0,
         productListData: [{
             title: "刷子",
             url: "http://img03.tooopen.com/images/20131102/sy_45238929299.jpg"
