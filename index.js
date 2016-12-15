@@ -1,6 +1,10 @@
 /**
  * Created by Administrator on 2016/12/12.
  */
+var First = { template: '<div><h2>我是第 1 个子页面</h2></div>' }
+
+// import secondcomponent from './component/advertisement.vue'
+
 new Vue({
     el: "#product",
     methods:{
@@ -11,8 +15,9 @@ new Vue({
         addCount:function () {
             this.productName = this.productName + 1;
         }
-    }
-    ,
+    },components:{
+            ad:First,
+    },
     data: {
         productName: 0,
         productListData: [{
